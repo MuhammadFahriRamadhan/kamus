@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="fahri.com.kamus.ui.main.MainViewModel"/>
+
+    </data>
+
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:id="@+id/toolbar_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        style="@style/Toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:subtitleTextColor="@color/white"
+                        app:title="@string/app_name"
+                        app:titleTextAppearance="@style/Toolbar.TitleText"
+                        app:titleTextColor="@color/white" />
+
+
+
+                </FrameLayout>
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/base_view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:clipToPadding="false" />
+
+            </android.support.design.widget.AppBarLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                style="@style/AppTab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue_black_light"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/white" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+</layout>

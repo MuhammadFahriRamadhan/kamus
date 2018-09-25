@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+                <import type="android.view.View" />
+                <variable
+                    name = "viewModel"
+                    type="fahri.com.kamus.ui.eng_indkamus.FragmentEngIndoViewModel"
+                    />
+
+    </data>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/navy_blue"
+        >
+
+
+        <EditText
+            android:id="@+id/input_word_edt"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="8dp"
+
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/rounded_edittext"
+            android:hint="@string/edit_text"
+            android:padding="@dimen/spacing_medium"
+            app:layout_constraintEnd_toStartOf="@+id/button"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="75dp"
+            android:backgroundTint="@color/blue_black_light"
+            android:onClick="@{() -> viewModel.onSearchClicked()}"
+            android:text="@string/search"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+            <LinearLayout
+                android:id="@+id/lnr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="60dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_word_edt"
+                >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/engIndRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    tools:engIndAdapter="@{viewModel.englishIndonesiaObservableArrayList}"
+                    tools:listitem="@layout/item_eng_ind" />
+
+
+            </LinearLayout>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/lnr"
+            app:layout_constraintStart_toStartOf="@+id/lnr"
+            app:layout_constraintTop_toBottomOf="@+id/lnr">
+
+            <TextView
+                android:id="@+id/result_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:layout_marginLeft="@dimen/spacing_medium"
+                android:layout_marginRight="@dimen/spacing_medium"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:text="@string/result"
+                android:textSize="@dimen/letter_large"
+                tools:text="@{viewModel.resultText}" />
+
+        </android.support.v7.widget.CardView>
+    </android.support.constraint.ConstraintLayout>
+
+</layout>
