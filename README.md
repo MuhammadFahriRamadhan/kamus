@@ -1,0 +1,2 @@
+# kamus
+kamus made
