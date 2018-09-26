@@ -6,18 +6,16 @@
 
     <data>
 
-                <import type="android.view.View" />
-                <variable
-                    name = "viewModel"
-                    type="fahri.com.kamus.ui.eng_indkamus.FragmentEngIndoViewModel"
-                    />
+        <import type="android.view.View" />
+        <variable
+            name = "viewModel"
+            type="fahri.com.kamus.ui.eng_indkamus.FragmentEngIndoViewModel" />
 
     </data>
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/navy_blue"
-        >
+        android:background="@color/navy_blue">
 
 
         <EditText
@@ -25,14 +23,12 @@
             android:layout_width="0dp"
             android:layout_height="38dp"
             android:layout_marginEnd="8dp"
-
             android:layout_marginStart="8dp"
             android:layout_marginTop="80dp"
             android:background="@drawable/rounded_edittext"
             android:hint="@string/edit_text"
             android:padding="@dimen/spacing_medium"
             app:layout_constraintEnd_toStartOf="@+id/button"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
