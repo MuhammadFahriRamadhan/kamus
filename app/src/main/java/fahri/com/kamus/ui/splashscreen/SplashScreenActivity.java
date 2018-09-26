@@ -6,7 +6,7 @@ import javax.inject.Inject;
 
 import fahri.com.kamus.R;
 import fahri.com.kamus.BR;
-import fahri.com.kamus.databinding.ActivityMainBinding;
+
 import fahri.com.kamus.databinding.ActivitySplashscreenBinding;
 import fahri.com.kamus.ui.base.BaseActivity;
 import fahri.com.kamus.ui.main.MainActivity;

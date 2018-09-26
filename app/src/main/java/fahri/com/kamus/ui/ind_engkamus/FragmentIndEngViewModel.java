@@ -26,7 +26,7 @@ public class FragmentIndEngViewModel extends BaseViewModel<FragmentIndEngNavigat
 
 
 
-    private Boolean typeWord;
+
 
     public FragmentIndEngViewModel(DataManager dataManager, SchedulerProvider schedulerProvider) {
         super(dataManager, schedulerProvider);
@@ -35,7 +35,7 @@ public class FragmentIndEngViewModel extends BaseViewModel<FragmentIndEngNavigat
         indonesiaEnglishListLiveData = new MutableLiveData<>();
 
 
-        typeWord = false;
+
     }
 
 

@@ -38,7 +38,7 @@ public class FragmentIndEng extends BaseFragment<ActivityFragmentIndengBinding, 
 
     ActivityFragmentIndengBinding mFragmentIndoEngBinding;
 
-    private static final String TAG = "IndoEng";
+    private static final String TAG = "FragmentIndEng";
 
     public static FragmentIndEng newInstance() {
         Bundle args = new Bundle();
@@ -78,7 +78,7 @@ public class FragmentIndEng extends BaseFragment<ActivityFragmentIndengBinding, 
 
                         }, throwable -> {
 
-                            Log.e(TAG, "onSearchClicked: ", throwable);
+
 
                         }));
     }

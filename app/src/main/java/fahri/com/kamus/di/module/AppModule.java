@@ -86,16 +86,7 @@ public class AppModule {
         return new DatabaseHelper(context);
     }
 
-//    @Provides
-//    String provideApiKey() {
-//        return BuildConfig.API_KEY;
-//    }
 
-//    @Provides
-//    @Singleton
-//    ApiHelper provideApiHelper(AppApiHelper appApiHelper) {
-//        return appApiHelper;
-//    }
 
 
     @Provides

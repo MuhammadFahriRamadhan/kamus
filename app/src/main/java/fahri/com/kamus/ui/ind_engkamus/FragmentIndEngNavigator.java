@@ -4,5 +4,5 @@ public interface FragmentIndEngNavigator {
 
     void onSearchClicked();
 
-    //void wipeText();
+
 }

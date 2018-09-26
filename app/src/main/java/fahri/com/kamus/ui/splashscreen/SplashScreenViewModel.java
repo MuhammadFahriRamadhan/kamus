@@ -15,7 +15,7 @@ import io.reactivex.disposables.Disposable;
 
 public class SplashScreenViewModel extends BaseViewModel<SplashScreenNavigator> {
 
-    private static final String TAG = "SplachScreenViewModel";
+    private static final String TAG = "SplashScreenViewModel";
 
     public ObservableInt progressObs = new ObservableInt(0);
     public ObservableInt showProgress;
@@ -29,11 +29,11 @@ public class SplashScreenViewModel extends BaseViewModel<SplashScreenNavigator> 
     private void setup() {
         showProgress = new ObservableInt();
         showProgress.set(View.INVISIBLE);
-        doProgressDb();
+        Dbenglish();
 
     }
 
-    public void doProgressDb() {
+    public void Dbenglish() {
         Boolean firstRun = getDataManager().getFirstRun();
         if (firstRun) {
             showProgress.set(View.VISIBLE);
@@ -67,13 +67,13 @@ public class SplashScreenViewModel extends BaseViewModel<SplashScreenNavigator> 
 
                         @Override
                         public void onComplete() {
-                            doProgressDbn();
+                            dbIndo();
                         }
                     });
         }
     }
 
-    public void doProgressDbn() {
+    public void dbIndo() {
         Boolean firstRun = getDataManager().getFirstRun();
         if (firstRun) {
             showProgress.set(View.VISIBLE);

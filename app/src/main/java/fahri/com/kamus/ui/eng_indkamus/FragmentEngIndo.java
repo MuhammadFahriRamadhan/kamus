@@ -79,7 +79,7 @@ public class FragmentEngIndo extends BaseFragment<ActivityFragmentEngindoBinding
 
                         }, throwable -> {
 
-                            Log.e(TAG, "onSearchClicked: ", throwable);
+
 
                         }));
     }

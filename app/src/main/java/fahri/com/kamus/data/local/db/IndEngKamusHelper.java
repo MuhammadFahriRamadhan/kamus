@@ -37,5 +37,5 @@ public interface IndEngKamusHelper {
     int deleteIndEng(int id);
     Observable<List<IndonesiaEnglish>> fetchDatabaseIndEng();
 
-    //Observable<Integer> fetchDatabaseIndEng(List<IndonesiaEnglish> indonesiaEnglish, ObservableInt progress);
+
 }
